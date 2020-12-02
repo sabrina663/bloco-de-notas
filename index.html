@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head lang='pt-br'>
+    <meta charset='UTF-8'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="styrleshhet" href='_css/normalize.css'>
+    <link rel='stylesheet' href='_css/estilo.css'>
+    <title>Bloco Notas</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class='plus'>
+                    <label for='btn-plus' class="btn-plus" id='label_plus'>+</label>
+                    <input type='checkbox' id='btn-plus' class='btn-plus'>
+                    <ul class='new-note' id='new-note'>
+
+                        <li>
+                            <input id="notacao" placeholder='Criar Notação'>
+                        </li>
+                        <li class="flex-item-btns">
+                            <button onclick='adicionar()'>Adicionar</button>
+                        </li>
+                    </ul>
+                </li>
+                
+            </ul>
+        <nav><!-- //menu -->
+    </header>
+        <div id='note' class='notacoes conteiner'>
+        </div><!-- //conteiner -->
+    <script src='_js/script.js'></script>
+</body>
+</html>

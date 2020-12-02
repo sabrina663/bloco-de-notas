@@ -1,0 +1,144 @@
+/* formatação padrão */
+*{
+    margin:0;
+    padding:0;
+}
+ul{
+    list-style:none;
+}
+a{
+    text-decoration: none;
+    color:rgb(248, 248, 248);
+}
+body{
+    background-color:#141414;
+    color:rgb(248, 248, 248);
+    font-family: 'Source Sans Pro', sans-serif;
+    min-width: 256px;;
+}
+/* formatação header */
+header{
+    background:black;
+    widows: 100%;
+    padding:20px;
+    display:flex;
+    justify-content:flex-end;
+}
+/* formatação do + */
+input[type=checkbox]{
+    display: none;
+}
+label.btn-plus{
+    font-size:1.5em;
+    position: relative;
+    right:10px;
+    border:1px solid rgba(255, 255, 255, 0.178);
+    padding:10px;
+}
+label.btn-plus:hover{
+    background-color: #141414;
+}
+/* onde cria uma nova anotação */
+
+ul li ul.new-note{
+    text-align: center;
+    padding:10px;
+    position: absolute;
+    left:-250px;
+    top:80px;
+    width: 150px;
+    height:150px;
+    transition: all 1s;
+    background-color:rgb(236, 236, 236);
+    border:1px solid rgba(0, 0, 0, 0.61);
+}
+ul li input[type=checkbox]:checked ~ ul.new-note{
+    color:red;
+    transform: translate(400px);
+
+}
+input#notacao{
+    border:none;
+    border-radius: 2px;
+    outline:none;
+    background-color:#141414;
+    border:1px solid black;
+    color:white;
+    margin:5px;
+    width: 80%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:0.9em;
+    text-align: center;
+}
+input#notacao:focus-visible{
+    padding:10px;
+}
+#notacao{
+    height:60px;
+    transition: all 1s;
+}
+.flex-item-btns{
+    display:flex;
+    justify-content: center;
+}
+button{
+    height:30px;
+    margin-top:20px;
+    margin-left:10px;
+    padding:5px;
+    border:1px solid black;
+    outline: none;
+}
+li#exit{
+    border:1px solid black;
+    width:60px;
+    height:20px;
+    padding:3px;
+    position: absolute;
+    font-weight: bold;
+    top:118px;
+    left:115px;
+    color:red;
+}
+li#exit input[type=checkbox]:checked ~ ul{
+    position: absolute;
+    left:-250px;
+}
+/* formatacao do conteiner exibição do passo passo */
+
+.notacoes{
+    display: flex;
+    flex-wrap: wrap;
+    border-radius:5px;
+    width:90%;
+    height:150px;
+    margin:10px;
+}
+table{
+    margin:5px 10px;
+    color:black;
+    border:1px solid black;
+    width:200px;
+    height:250px;
+    animation: bt 3s infinite;
+    text-align:center;
+    font-size:1.2em;/* 
+    background-color:rgb(108, 193, 204); */
+}
+@keyframes bt{
+    0%{
+        border-left-color: wheat;
+    }
+    25%{
+        border-top-color: wheat;
+    }
+    50%{
+        border-right-color: wheat;
+    }
+    75%{
+        border-bottom-color: wheat;
+    }
+    100%{
+        border-left-color: black;
+    }
+}
